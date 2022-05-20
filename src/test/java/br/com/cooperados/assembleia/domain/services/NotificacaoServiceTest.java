@@ -16,7 +16,7 @@ import java.util.UUID;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-public class NotificacaoServiceTest {
+class NotificacaoServiceTest {
 
     @InjectMocks
     NotificacaoServiceImpl notificacaoService;

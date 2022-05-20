@@ -19,7 +19,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @ExtendWith(MockitoExtension.class)
-public class CooperadoServiceTest {
+class CooperadoServiceTest {
 
     @InjectMocks
     CooperadoServiceImpl cooperadoService;
