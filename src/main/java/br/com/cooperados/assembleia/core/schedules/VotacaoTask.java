@@ -1,10 +1,7 @@
 package br.com.cooperados.assembleia.core.schedules;
 
-import br.com.cooperados.assembleia.api.v1.mappers.VotacaoMapper;
 import br.com.cooperados.assembleia.domain.services.NotificacaoService;
 import br.com.cooperados.assembleia.domain.services.VotacaoService;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +30,7 @@ public class VotacaoTask {
                 votacao -> {
                     log.info("Encerrando votacao da pauta {}.", votacao.getPauta().getId());
                     votacaoService.encerrar(votacao.getId());
-                    var votacaoApurada = votacaoService.apurar(votacao.getId());
+                    votacaoService.apurar(votacao.getId());
                     notificacaoService.notificar(String.format("A votação %s da pauta %s foi encerrada.", votacao.getId(), votacao.getPauta().getId()));
                 }
         );
