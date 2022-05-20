@@ -5,9 +5,7 @@ import br.com.cooperados.assembleia.domain.enums.StatusDaVotacao;
 import br.com.cooperados.assembleia.domain.enums.StatusDoUsuario;
 import br.com.cooperados.assembleia.domain.exceptions.*;
 import br.com.cooperados.assembleia.domain.models.*;
-import br.com.cooperados.assembleia.domain.repositories.VotacaoRepository;
 import br.com.cooperados.assembleia.domain.repositories.VotoRepository;
-import br.com.cooperados.assembleia.domain.services.impl.VotacaoServiceImpl;
 import br.com.cooperados.assembleia.domain.services.impl.VotoServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -16,7 +14,6 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.time.LocalDateTime;
-import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 

@@ -1,16 +1,13 @@
 package br.com.cooperados.assembleia.domain.services;
 
 import br.com.cooperados.assembleia.domain.enums.OpcaoDeVoto;
-import br.com.cooperados.assembleia.domain.enums.ResultadoDaVotacao;
 import br.com.cooperados.assembleia.domain.enums.StatusDaVotacao;
 import br.com.cooperados.assembleia.domain.exceptions.*;
 import br.com.cooperados.assembleia.domain.models.Cooperado;
 import br.com.cooperados.assembleia.domain.models.Pauta;
 import br.com.cooperados.assembleia.domain.models.Votacao;
 import br.com.cooperados.assembleia.domain.models.Voto;
-import br.com.cooperados.assembleia.domain.repositories.CooperadoRepository;
 import br.com.cooperados.assembleia.domain.repositories.VotacaoRepository;
-import br.com.cooperados.assembleia.domain.services.impl.CooperadoServiceImpl;
 import br.com.cooperados.assembleia.domain.services.impl.VotacaoServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -20,7 +17,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Objects;
 import java.util.Optional;
 import java.util.UUID;
 
