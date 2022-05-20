@@ -9,8 +9,6 @@ public interface PautaService {
 
     Pauta cadastrar(Pauta pauta);
 
-    Pauta atualizar(Pauta novosDadosDaPauta);
-
     Pauta buscar(UUID idDaPauta);
 
     List<Pauta> buscarTodas();

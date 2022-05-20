@@ -26,13 +26,6 @@ public class PautaServiceImpl implements PautaService {
     }
 
     @Override
-    public Pauta atualizar(Pauta novosDadosDaPauta) {
-        var pauta = buscar(novosDadosDaPauta.getId());
-        pauta.setConteudo(novosDadosDaPauta.getConteudo());
-        return pautaRepository.save(pauta);
-    }
-
-    @Override
     public Pauta buscar(UUID idDaPauta) {
         return pautaRepository.findById(idDaPauta)
                 .orElseThrow(() -> new PautaNaoEncontradaException(idDaPauta));
