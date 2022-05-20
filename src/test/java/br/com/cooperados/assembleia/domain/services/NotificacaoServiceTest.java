@@ -3,6 +3,8 @@ package br.com.cooperados.assembleia.domain.services;
 import br.com.cooperados.assembleia.api.v1.models.VotacaoResponseDTO;
 import br.com.cooperados.assembleia.domain.enums.StatusDaVotacao;
 import br.com.cooperados.assembleia.domain.services.impl.NotificacaoServiceImpl;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -25,12 +27,11 @@ class NotificacaoServiceTest {
     KafkaTemplate<String, Object> notificador;
 
     @Test
-    void deve_notificar_encerramento_da_votacao() {
+    void deve_notificar_encerramento_da_votacao() throws JsonProcessingException {
         var votacaoResponse = votacaoResponse();
-        notificacaoService.notificar(votacaoResponse);
-        verify(notificador, times(1)).send(NotificacaoServiceImpl.TOPICO_VOTACAO_ENCERRADA, votacaoResponse);
+        notificacaoService.notificar("Votação encerrada.");
+        verify(notificador, times(1)).send(NotificacaoServiceImpl.TOPICO_VOTACAO_ENCERRADA, "Votação encerrada.");
     }
-
 
     private VotacaoResponseDTO votacaoResponse() {
         var votacaoResponse = new VotacaoResponseDTO();
