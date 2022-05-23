@@ -2,8 +2,8 @@
 Projeto backend utilizando __Spring Boot__, para a gestão de assembléias de cooperados.
 
 ## Instruções
-A API já está UP na [AWS](http://ec2-50-17-41-9.compute-1.amazonaws.com:8080/actuator/health).  
-Para testar a API utilizar a [Collection do Postman](https://www.postman.com/collections/bd048c6fb40da480aaea).  
+A API já está UP na [AWS](http://ec2-100-26-104-207.compute-1.amazonaws.com:8080/actuator/health).  
+Para testar a API utilizar a [Collection do Postman](https://www.getpostman.com/collections/bd048c6fb40da480aaea).  
 
 ## Features
 - Cadastro de Cooperados
@@ -21,7 +21,7 @@ Para testar a API utilizar a [Collection do Postman](https://www.postman.com/col
 ## Pipeline
 - CircleCI : https://app.circleci.com/pipelines/github/dboegershausen/assembleia
 - SonarCloud : https://sonarcloud.io/summary/overall?id=dboegershausen_assembleia
-- AWS : http://ec2-50-17-41-9.compute-1.amazonaws.com:8080/actuator/health
+- AWS : http://ec2-100-26-104-207.compute-1.amazonaws.com:8080/actuator/health
 
 ## Rodar Localmente
 - docker build -t assembleia .
