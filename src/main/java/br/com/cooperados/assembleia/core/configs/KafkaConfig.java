@@ -1,7 +1,6 @@
 package br.com.cooperados.assembleia.core.configs;
 
 import br.com.cooperados.assembleia.api.v1.models.PautaResponseDTO;
-import br.com.cooperados.assembleia.api.v1.models.VotacaoResponseDTO;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.beans.factory.annotation.Value;
