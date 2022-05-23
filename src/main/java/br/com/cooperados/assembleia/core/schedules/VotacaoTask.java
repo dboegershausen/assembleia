@@ -1,5 +1,6 @@
 package br.com.cooperados.assembleia.core.schedules;
 
+import br.com.cooperados.assembleia.api.v1.mappers.PautaMapper;
 import br.com.cooperados.assembleia.domain.services.NotificacaoService;
 import br.com.cooperados.assembleia.domain.services.VotacaoService;
 import org.slf4j.Logger;
@@ -30,8 +31,8 @@ public class VotacaoTask {
                 votacao -> {
                     log.info("Encerrando votacao da pauta {}.", votacao.getPauta().getId());
                     votacaoService.encerrar(votacao.getId());
-                    votacaoService.apurar(votacao.getId());
-                    notificacaoService.notificar(String.format("A votação %s da pauta %s foi encerrada.", votacao.getId(), votacao.getPauta().getId()));
+                    var votacaoApurada = votacaoService.apurar(votacao.getId());
+                    notificacaoService.notificar(PautaMapper.paraResponseDto(votacaoApurada.getPauta()));
                 }
         );
     }
